@@ -1,0 +1,12 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+  transition: 0.3s;
+  text-align: center;
+  align-items: center;
+}
+.navbar a{
+    padding: 0 20px;
+}
