@@ -1,3 +1,5 @@
+
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -6,6 +8,8 @@
   transition: 0.3s;
   text-align: center;
   align-items: center;
+  font-family: Bluu Next,serif;
+  font-weight: 700;
 }
 .navbar a{
     padding: 0 20px;
