@@ -13,7 +13,7 @@ function App() {
     price: 250,
   };
   const fondo = {
-    griffindor: {fondogriffindor},
+    griffindor: fondogriffindor,
     Hufflepuff: {},
     Ravenclaw:{},
     Slytherin:{}
@@ -24,7 +24,7 @@ function App() {
       <Header />
 
       <ItemListContainer text="Griffindor" fondo={fondo.griffindor}>
-        <Card data={product} />
+        <Card data={product}/>
       </ItemListContainer>
       <ItemListContainer text="Hufflepuff" fondo={fondogriffindor}>
         <Card data={product} />

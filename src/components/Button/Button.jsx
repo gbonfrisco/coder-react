@@ -1,14 +1,7 @@
 import "./Button.css";
 
-function Button({text,type}) {
-  
-  const btnstyle = {
-    backgroundColor: type === "alert"? "red":"green",
-  }            
-  
-    return (  
-    <button style={btnstyle} className="btn">{text}</button>
-  )
-}                       
+function Button({ text }) {
+  return <button className="btn">{text}</button>;
+}
 
-export default Button                                                       
+export default Button;

@@ -17,6 +17,13 @@
 
 }
 
+.navbar img{
+  padding: 0 20px;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
 .navbar .cart{
 width: 4vh;
 height: 4vh;

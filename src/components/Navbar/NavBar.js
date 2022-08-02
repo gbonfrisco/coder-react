@@ -9,7 +9,7 @@ export default function NavBar() {
         <a href="#">Hufflepuff</a>
         <a href="#">Ravenclaw</a>
         <a href="#">Slytherin</a>
-        <img className="cart" src={cart} alt="cart" />
+         <img className="cart" src={cart} alt="cart" />
       </ul>
     </div>
   );

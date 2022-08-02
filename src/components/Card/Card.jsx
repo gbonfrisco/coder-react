@@ -1,5 +1,6 @@
 
 import Button from "../Button/Button";
+import ItemCount from "../ItemCount/ItemCount";
 import "./Card.css";
 
 function Card(props) {
@@ -12,7 +13,8 @@ function Card(props) {
         <h2>{props.data.name}</h2>
         <span>{props.data.description}</span>
         <h3>{props.data.price}</h3>
-        <Button type="buy" text="Comprar"/>
+        {/* <Button type="buy" text="Comprar"/> */}
+        <ItemCount initial={1} stock={20}/>
       </div>
     </div>
   );
