@@ -3,7 +3,7 @@ import "./ItemListContainer.css"
 
 function ItemListContainer({ children, greeting, text, fondo }) {
 
-  const fondoBack = { backgroundImage: fondo};
+  const fondoBack = { backgroundImage: `url(${fondo})`};
 
   return (
     <div style={fondoBack} className="Card">
@@ -13,5 +13,4 @@ function ItemListContainer({ children, greeting, text, fondo }) {
     </div>
   );
 }
-
 export default ItemListContainer;

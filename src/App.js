@@ -1,9 +1,12 @@
-import logoHome from "./plataforma.jpg";
+
 import "./App.css";
 import Header from "./components/Header/Header";
 import Card from "../src/components/Card/Card";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import fondogriffindor from "./fondogriffindor.jpg";
+import fondoslytherin from "./fondoslytherin.jpg";
+import fondohufflepuff from "./fondohufflepuff.jpg";
+import fondorevenclaw from "./fondorevenclaw.jpg";
 
 function App() {
   const product = {
@@ -14,9 +17,9 @@ function App() {
   };
   const fondo = {
     griffindor: fondogriffindor,
-    Hufflepuff: {},
-    Ravenclaw:{},
-    Slytherin:{}
+    Hufflepuff: {fondohufflepuff},
+    Ravenclaw:{fondorevenclaw},
+    Slytherin:fondoslytherin
   }
 
   return (
@@ -26,17 +29,16 @@ function App() {
       <ItemListContainer text="Griffindor" fondo={fondo.griffindor}>
         <Card data={product}/>
       </ItemListContainer>
-      <ItemListContainer text="Hufflepuff" fondo={fondogriffindor}>
+      <ItemListContainer text="Hufflepuff" fondo={fondohufflepuff}>
         <Card data={product} />
       </ItemListContainer>
-      <ItemListContainer text="Ravenclaw" fondo={fondogriffindor}>
+      <ItemListContainer text="Ravenclaw" fondo={fondorevenclaw}>
         <Card data={product} />
       </ItemListContainer>
-      <ItemListContainer text="Slytherin" fondo={fondogriffindor}>
+      <ItemListContainer text="Slytherin" fondo={fondoslytherin}>
         <Card data={product} />
       </ItemListContainer>
 
-      <img src={logoHome} className="App-logo" alt="logo" />
     </div>
   );
 }
