@@ -1,7 +1,6 @@
 
 import "./App.css";
 import Header from "./components/Header/Header";
-import Card from "../src/components/Card/Card";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import fondogriffindor from "./fondogriffindor.jpg";
 import fondoslytherin from "./fondoslytherin.jpg";
@@ -27,9 +26,9 @@ function App() {
       <Header />
 
       <ItemListContainer text="Griffindor" fondo={fondo.griffindor}>
-        <Card data={product}/>
-      </ItemListContainer>
-      <ItemListContainer text="Hufflepuff" fondo={fondohufflepuff}>
+        
+       </ItemListContainer>
+      {/*<ItemListContainer text="Hufflepuff" fondo={fondohufflepuff}>
         <Card data={product} />
       </ItemListContainer>
       <ItemListContainer text="Ravenclaw" fondo={fondorevenclaw}>
@@ -37,7 +36,7 @@ function App() {
       </ItemListContainer>
       <ItemListContainer text="Slytherin" fondo={fondoslytherin}>
         <Card data={product} />
-      </ItemListContainer>
+      </ItemListContainer> */}
 
     </div>
   );

@@ -3,18 +3,18 @@ import Button from "../Button/Button";
 import ItemCount from "../ItemCount/ItemCount";
 import "./Card.css";
 
-function Card(props) {
+function Card({tittle, desc, price, img, stock}) {
   return (
     <div className="card">
       <div className="card-img">
-        <img src={props.data.imgurl} alt="img" />
+        <img src={img} alt="img" />
       </div>
       <div className="card-detail">
-        <h2>{props.data.name}</h2>
-        <span>{props.data.description}</span>
-        <h3>{props.data.price}</h3>
+        <h2>{tittle}</h2>
+        <span>{desc}</span>
+        <h3>{price}</h3>
         {/* <Button type="buy" text="Comprar"/> */}
-        <ItemCount initial={1} stock={20}/>
+        <ItemCount initial={1} stock={stock}/>
       </div>
     </div>
   );
