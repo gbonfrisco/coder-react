@@ -21,7 +21,7 @@ export default function ItemListContainer({ fondo }) {
   }, []);
 
   return (
-    <div>
+    <div className="card-container">
       {data.map((dataElem) => {
         return (
           <Card

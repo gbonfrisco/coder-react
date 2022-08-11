@@ -1,9 +1,9 @@
 
 import Button from "../Button/Button";
 import ItemCount from "../ItemCount/ItemCount";
-import "./Card.css";
+// import "./Card.css";
 
-function Card({tittle, desc, price, img, stock}) {
+function ItemDetail({tittle, desc, price, img, stock}) {
   return (
     <div className="card">
       <div className="card-img">
@@ -13,11 +13,11 @@ function Card({tittle, desc, price, img, stock}) {
         <h2>{tittle}</h2>
         <span>{desc}</span>
         <h3>{price}</h3>
-        <Button type="buy" text="Comprar"/>
-        {/* <ItemCount initial={1} stock={stock}/> */}
+        {/* <Button type="buy" text="Comprar"/> */}
+        <ItemCount initial={1} stock={stock}/>
       </div>
     </div>
   );
 }
 
-export default Card;
+export default ItemDetail;

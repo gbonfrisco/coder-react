@@ -6,6 +6,8 @@ import fondogriffindor from "./fondogriffindor.jpg";
 import fondoslytherin from "./fondoslytherin.jpg";
 import fondohufflepuff from "./fondohufflepuff.jpg";
 import fondorevenclaw from "./fondorevenclaw.jpg";
+import { BrowserRouter } from "react-router-dom";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
   const product = {
@@ -25,9 +27,10 @@ function App() {
     <div className="App">
       <Header />
 
-      <ItemListContainer text="Griffindor" fondo={fondo.griffindor}>
+      <ItemListContainer text="Griffindor" fondo={fondo.griffindor}/>
         
-       </ItemListContainer>
+      <ItemDetailContainer/>
+
       {/*<ItemListContainer text="Hufflepuff" fondo={fondohufflepuff}>
         <Card data={product} />
       </ItemListContainer>
