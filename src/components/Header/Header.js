@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 export default function Header() {
   return (
     <header>
-      <Link  to={"/home"}>
+      <Link  to={"/"}>
         <img className="logo" src={logo} alt="logo"/>
         </Link>
       <NavBar />

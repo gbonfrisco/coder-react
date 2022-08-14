@@ -122,7 +122,7 @@ const itemsData=[
       "name": "Night King",
       "description": "Funko Pop! Game Of Thrones Night King",
       "price": 5000,
-      "category": "Beyond the Wall",
+      "category": "Beyondthewall",
       "img": "./nightKing.jpg",
       "stock": 20
     },
@@ -131,7 +131,7 @@ const itemsData=[
       "name": "White Walker",
       "description": "Funko Pop! Game Of Thrones White Walker",
       "price": 5000,
-      "category": "Beyond the Wall",
+      "category": "Beyondthewall",
       "img": "./whiteWalker.jpg",
       "stock": 6
     }

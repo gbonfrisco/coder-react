@@ -35,7 +35,7 @@ export default function ItemListContainer() {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [idCategory]);
 
   return (
     // <div className="card-container">
