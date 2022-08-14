@@ -8,6 +8,7 @@ function ItemList({products}) {
         return (
           <Card
             key={dataElem.id}
+            id={dataElem.id}
             tittle={dataElem.name}
             desc={dataElem.description}
             price={dataElem.price}

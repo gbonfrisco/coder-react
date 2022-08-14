@@ -4,6 +4,7 @@ import itemsData from "../../components/Data/Data.js";
 import { useEffect } from "react";
 import { useState } from "react";
 import ItemList from "../ItemList/ItemList";
+import { useParams } from "react-router-dom";
 
 function getProduct() {
   return new Promise((resolve) => {
@@ -11,18 +12,33 @@ function getProduct() {
   });
 }
 
-export default function ItemListContainer({ fondo }) {
-  
-
+export default function ItemListContainer() {
   const [data, setData] = useState([]);
 
+  const idCategory = useParams().category;
+  console.log(idCategory);
   useEffect(() => {
-    getProduct().then((respuesta) => setData(respuesta));
+    getProduct()
+      .then((respuesta) => {
+        console.log(respuesta);
+        let filtrados = respuesta.filter((elemento) => elemento.category === idCategory);
+        if (idCategory === undefined){
+          console.log("idCategory es undefined");
+          setData(respuesta);
+        }
+        else {
+          
+          console.log(filtrados);
+          setData(filtrados);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
 
   return (
     // <div className="card-container">
-  <ItemList products={data}>  
-  </ItemList>
+    <ItemList products={data}></ItemList>
   );
 }
