@@ -12,9 +12,7 @@ const handleMinus = ()=> {
 const handlePlus = ()=> {
     clicks < props.stock ? setClicks(clicks+1) : setClicks(clicks+0) ;
 }
-const add = () =>{
-    console.log("Añadido al carrito");
-}
+
   return (
     <>
     <div className='handleButton'>
@@ -22,7 +20,7 @@ const add = () =>{
         <h3>{clicks}</h3>
         <Button onClick={handlePlus} text="+"></Button>
     </div>
-    <Button onClick={add} text="Añadir al carrito"> </Button>
+    <Button onClick={()=> props.onAdd(clicks)} text="Añadir al carrito"> </Button>
         
     </>
   )

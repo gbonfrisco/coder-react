@@ -5,7 +5,7 @@ const itemsData=[
       "description": "Funko Pop! Game Of Thrones Sansa Stark.",
       "price": 3000,
       "category": "Stark",
-      "img": "./sansaStark.jpg",
+      "img": "/sansaStark.jpg",
       "stock": 15
     },
     {
@@ -14,7 +14,7 @@ const itemsData=[
       "description": "Funko Pop! Game Of Thrones Arya Stark.",
       "price": 4500,
       "category": "Stark",
-      "img": "./aryaStark.jpg",
+      "img": "/aryaStark.jpg",
       "stock": 1
     },
     {
@@ -23,7 +23,7 @@ const itemsData=[
       "description": "Funko Pop! Game Of Thrones Bran Stark.",
       "price": 4000,
       "category": "Stark",
-      "img": "./branStark.jpg",
+      "img": "/branStark.jpg",
       "stock": 5
     },
     {
@@ -32,7 +32,7 @@ const itemsData=[
       "description": "Funko Pop! Game Of Thrones Jon Snow.",
       "price": 5000,
       "category": "Stark",
-      "img": "./jonSnow.jpg",
+      "img": "/jonSnow.jpg",
       "stock": 17
     },
     {
@@ -41,7 +41,7 @@ const itemsData=[
       "description": "Funko Pop! Game Of Thrones Ned Stark.",
       "price": 4500,
       "category": "Stark",
-      "img": "./nedStark.jpg",
+      "img": "/nedStark.jpg",
       "stock": 18
     },
     {
@@ -51,7 +51,7 @@ const itemsData=[
       "description":"Funko Pop! Game Of Thrones Tyron Lannister.",
       "price": 2500,
       "category": "Lannister",
-      "img": "./tyronLannister.jpg",
+      "img": "/tyronLannister.jpg",
       "stock": 9
     },
     {
@@ -60,7 +60,7 @@ const itemsData=[
       "description": "Funko Pop! Game Of Thrones Cersei Lannister.",
       "price": 4000,
       "category": "Lannister",
-      "img": "./CerseiLannister.jpg",
+      "img": "/CerseiLannister.jpg",
       "stock": 7
     },
     {
@@ -69,7 +69,7 @@ const itemsData=[
       "description": "Funko Pop! Game Of Thrones Jaime Lannister.",
       "price": 5000,
       "category": "Lannister",
-      "img": "./jaimeLannister.jpg",
+      "img": "/jaimeLannister.jpg",
       "stock": 13
     },
     {
@@ -78,7 +78,7 @@ const itemsData=[
       "description": "Funko Pop! Game Of Thrones Daenerys Targaryen.",
       "price": 6000,
       "category": "Others",
-      "img": "./danyTargaryen.jpg",
+      "img": "/danyTargaryen.jpg",
       "stock": 20
     },
     {
@@ -87,7 +87,7 @@ const itemsData=[
       "description": "Funko Pop! Game Of Thrones Daenerys Targaryen - Astapor.",
       "price": 6000,
       "category": "Others",
-      "img": "./danyTargaryen2.jpg",
+      "img": "/danyTargaryen2.jpg",
       "stock": 6
     },
     {
@@ -96,7 +96,7 @@ const itemsData=[
       "description": "Funko Pop! Game Of Thrones Ghost - Direwolf",
       "price": 10000,
       "category": "Others",
-      "img": "./ghost.jpg",
+      "img": "/ghost.jpg",
       "stock": 13
     },
     {
@@ -105,7 +105,7 @@ const itemsData=[
       "description": "Funko Pop! Game Of Thrones Renly Baratheon",
       "price": 2000,
       "category": "Others",
-      "img": "./kingRenly.jpg",
+      "img": "/kingRenly.jpg",
       "stock": 14
     },
     {
@@ -114,7 +114,7 @@ const itemsData=[
       "description": "Funko Pop! Game Of Thrones Vyserion",
       "price": 5000,
       "category": "Others",
-      "img": "./Vyserion.jpg",
+      "img": "/Vyserion.jpg",
       "stock": 6
     },
     {
@@ -123,7 +123,7 @@ const itemsData=[
       "description": "Funko Pop! Game Of Thrones Night King",
       "price": 5000,
       "category": "Beyondthewall",
-      "img": "./nightKing.jpg",
+      "img": "/nightKing.jpg",
       "stock": 20
     },
     {
@@ -132,7 +132,7 @@ const itemsData=[
       "description": "Funko Pop! Game Of Thrones White Walker",
       "price": 5000,
       "category": "Beyondthewall",
-      "img": "./whiteWalker.jpg",
+      "img": "/whiteWalker.jpg",
       "stock": 6
     }
   ];

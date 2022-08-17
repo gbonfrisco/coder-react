@@ -14,7 +14,7 @@ function ItemDetailContainer() {
     return new Promise((resolve, reject) => {
 
       let itemRequested = data.find( elemento => elemento.id == idURL )
-      resolve(itemRequested)
+      setTimeout(() => resolve(itemRequested), 1000);
     });
   }
 

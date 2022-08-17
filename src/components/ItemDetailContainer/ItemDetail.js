@@ -4,6 +4,14 @@ import ItemCount from "../ItemCount/ItemCount";
 // import "./Card.css";
 
 function ItemDetail({tittle, desc, price, img, stock}) {
+
+  function handleAdd(count){
+    console.log("Agregar al carrito", count);
+    //acá guardar el count en un estado - setState.
+  }
+
+
+
   return (
     <div className="card">
       <div className="card-img">
@@ -14,7 +22,7 @@ function ItemDetail({tittle, desc, price, img, stock}) {
         <span>{desc}</span>
         <h3>{price}</h3>
         {/* <Button type="buy" text="Comprar"/> */}
-        <ItemCount initial={1} stock={stock}/>
+        <ItemCount initial={1} stock={stock} onAdd={handleAdd} />
       </div>
     </div>
   );
