@@ -1,8 +1,5 @@
 .card{
     margin: 10px 15px;
-    /* min-height: 600px;
-    height: 50vh; */
-    /* width: 280px;    */
     max-width: 450px;
     min-height: 450px;
     border-radius: 4px;
@@ -10,7 +7,7 @@
     background-color: #fff;
     overflow: hidden;  
     transition: all 0.3s ease-in-out;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .card:hover{
     box-shadow: 0px 4px 16px rgba(0,0,0,0.35);
@@ -25,7 +22,15 @@
   .card .card-detail{
     align-items: center;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+
   }
-  .card .card-detail span{
-    height: 200px;
-  }
+
+.card .card-detail a{
+  cursor: pointer;
+  margin: 1rem;
+}
+.card .card-detail button{
+  cursor: pointer;
+}
