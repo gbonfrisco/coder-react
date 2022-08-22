@@ -16,19 +16,16 @@ export default function ItemListContainer() {
   const [data, setData] = useState([]);
 
   const idCategory = useParams().category;
-  console.log(idCategory);
   useEffect(() => {
     getProduct()
       .then((respuesta) => {
-        console.log(respuesta);
         let filtrados = respuesta.filter((elemento) => elemento.category === idCategory);
         if (idCategory === undefined){
-          console.log("idCategory es undefined");
+         
           setData(respuesta);
         }
         else {
           
-          console.log(filtrados);
           setData(filtrados);
         }
       })

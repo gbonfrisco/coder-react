@@ -25,6 +25,7 @@ function ItemDetailContainer() {
   return (
     <ItemDetail
       key={item.id}
+      id={item.id}
       tittle={item.name}
       desc={item.description}
       price={item.price}

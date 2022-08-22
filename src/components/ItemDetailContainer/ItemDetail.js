@@ -2,14 +2,20 @@
 import { useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
+import {useContext} from "react";
+import {cartContext} from "../../store/cartContext";
 
-function ItemDetail({tittle, desc, price, img, stock}) {
+
+function ItemDetail({id, tittle, desc, price, img, stock}) {
 
   const [quantityInCart, setquantityInCart] = useState(0);
+  const {addToCart} = useContext(cartContext);
 
   function handleAdd(count){
     console.log("Agregar al carrito", count);
-    setquantityInCart(count);
+   // setquantityInCart(count);
+   const item = {key: id,id,tittle,desc,price,img,stock}
+   addToCart(item, count); 
   }
   
 
@@ -29,6 +35,7 @@ function ItemDetail({tittle, desc, price, img, stock}) {
         initial={1} 
         stock={stock} 
         onAdd={handleAdd} 
+        value={quantityInCart}
         />
         {quantityInCart !== 0?
           <a href="/cart">Ir al carrito</a>

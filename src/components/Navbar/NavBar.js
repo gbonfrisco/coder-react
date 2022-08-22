@@ -19,7 +19,7 @@ export default function NavBar() {
          <Link to="/category/Lannister">Lannister</Link>
          <Link to="/category/Beyondthewall">Beyond the Wall</Link>
          <Link to="/category/Others">Others</Link>
-        <img className="cart" src={cart} alt="cart" />
+         <Link to="/cart"><img className="cart" src={cart} alt="cart" /></Link>
       </ul>
     </div>
   );
