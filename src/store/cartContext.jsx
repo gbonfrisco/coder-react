@@ -40,18 +40,22 @@ export function CartProvider({ children }) {
     return index;
   }
   function removeItem(id) {
-    let index = buscarIndice(id);
-    console.log("el indice de cart para este elemento es:", index);
-    index != -1
-      ? cart.splice(index, 1)
-      : console.log("No existe el producto en el carrito");
+    const arr = cart.filter((item) => item.id !== id);
+    setCart(arr);
+      
   }
   function clear() {
     setCart([]);
   }
-
+  function totalItem(){
+    let total = 0;
+    cart.map((elem)=>{
+        total = total + elem.quantity;
+      })
+    return total;
+  }
   return (
-    <cartContext.Provider value={{ cart, addToCart }}>
+    <cartContext.Provider value={{ cart, setCart, addToCart, removeItem, totalItem}}>
       {children}
     </cartContext.Provider>
   );

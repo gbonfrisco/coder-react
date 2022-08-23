@@ -7,7 +7,11 @@ export default function Header() {
   return (
     <header>
       <Link  to={"/"}>
-        <img className="logo" src={logo} alt="logo"/>
+        <img 
+        className="logo" 
+        src={logo} 
+        alt="logo"
+        />
         </Link>
       <NavBar />
     </header>
