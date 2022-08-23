@@ -6,6 +6,9 @@ import { useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 
+import firestoreBD from "../../services/firestore";
+import {getDocs, collection} from "firebase/firestore" 
+
 function getProduct() {
   return new Promise((resolve) => {
     setTimeout(() => resolve(itemsData), 1000);

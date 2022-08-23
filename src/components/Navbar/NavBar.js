@@ -1,15 +1,12 @@
 import "./NavBar.css";
 import cart from "./bx-cart.svg";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { cartContext } from "../../store/cartContext";
 
 export default function NavBar() {
-  // const menu = [
-  //   { key: 1, url: "/home", tittle: "Home" },
-  //   { key: 2, url: "/category/stark", tittle: "House Stark" },
-  //   { key: 3, url: "/category/lannister", tittle: "House Lannister" },
-  //   { key: 4, url: "/category/beyondthewall", tittle: "Beyond the Wall" },
-  //   { key: 5, url: "/category/others", tittle: "Others" },
-  // ];
+
+  const {totalItem} = useContext(cartContext);
 
   return (
     <div>
@@ -19,7 +16,7 @@ export default function NavBar() {
          <Link to="/category/Lannister">Lannister</Link>
          <Link to="/category/Beyondthewall">Beyond the Wall</Link>
          <Link to="/category/Others">Others</Link>
-         <Link to="/cart"><img className="cart" src={cart} alt="cart" /></Link>
+         <Link to="/cart"><img className="cart" src={cart} alt="cart" />{totalItem()}</Link>
       </ul>
     </div>
   );

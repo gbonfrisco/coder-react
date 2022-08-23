@@ -7,6 +7,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import {CartProvider} from "./store/cartContext.jsx";
 
+import app from "./services/firestore.js"
+import firestoreBD from "./services/firestore.js";
+
 function App() {
 
 
