@@ -16,7 +16,12 @@ export default function NavBar() {
          <Link to="/category/Lannister">Lannister</Link>
          <Link to="/category/Beyondthewall">Beyond the Wall</Link>
          <Link to="/category/Others">Others</Link>
-         <Link to="/cart"><img className="cart" src={cart} alt="cart" />{totalItem()}</Link>
+         {
+          totalItem()>0 ?
+          <Link to="/cart"><img className="cart" src={cart} alt="cart" />{totalItem()}</Link>
+          : <></>
+         }
+         
       </ul>
     </div>
   );

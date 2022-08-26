@@ -13,7 +13,7 @@ function ItemDetail({id, tittle, desc, price, img, stock}) {
 
   function handleAdd(count){
     console.log("Agregar al carrito", count);
-   // setquantityInCart(count);
+   setquantityInCart(count);
    const item = {key: id,id,tittle,desc,price,img,stock}
    addToCart(item, count); 
   }

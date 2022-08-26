@@ -1,11 +1,22 @@
 import React, { useState } from "react";
 
-function Form() {
+function Form({cart}) {
   const [userData, setUserData] = useState({
     name: "",
     email: "",
     telefono: "",
   });
+
+
+let total = 0;
+cart.forEach(item => total += item.price * item.quantity);
+
+const ordenDeCompra = {
+  buyer: {...userData},
+  items: [...cart],
+  total: 0
+}
+
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -30,6 +41,7 @@ function Form() {
       telefono: "",
     });
   }
+
 
   return (
     <div className="form-container">

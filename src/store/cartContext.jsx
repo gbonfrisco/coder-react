@@ -10,13 +10,9 @@ import itemsData from "../components/Data/Data";
 export const cartContext = createContext();
 
 export function CartProvider({ children }) {
-  
   const [cart, setCart] = useState([]);
 
-
-
   function addToCart(item, count) {
- 
     if (isInCart(item.id)) {
       let index = buscarIndice(item.id);
 
@@ -42,20 +38,29 @@ export function CartProvider({ children }) {
   function removeItem(id) {
     const arr = cart.filter((item) => item.id !== id);
     setCart(arr);
-      
   }
   function clear() {
     setCart([]);
   }
-  function totalItem(){
+  function totalItem() {
     let total = 0;
-    cart.map((elem)=>{
-        total = total + elem.quantity;
-      })
+    cart.map((elem) => {
+      total = total + elem.quantity;
+    });
     return total;
   }
+  
+  function totalPricing() {
+    let total = 0;
+    cart.forEach((item) => {
+      total += item.price * item.quantity;
+    });
+  }
+
   return (
-    <cartContext.Provider value={{ cart, setCart, addToCart, removeItem, totalItem}}>
+    <cartContext.Provider
+      value={{ cart, setCart, addToCart, removeItem, totalItem }}
+    >
       {children}
     </cartContext.Provider>
   );
