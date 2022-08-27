@@ -11,7 +11,7 @@ function Form({cart}) {
 let total = 0;
 cart.forEach(item => total += item.price * item.quantity);
 
-const ordenDeCompra = {
+const order = {
   buyer: {...userData},
   items: [...cart],
   total: 0

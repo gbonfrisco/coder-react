@@ -14,7 +14,7 @@ export function CartProvider({ children }) {
 
   function addToCart(item, count) {
     if (isInCart(item.id)) {
-      let index = buscarIndice(item.id);
+      let index = searchIndex(item.id);
 
       let copyCart = [...cart];
       copyCart[index].quantity = copyCart[index].quantity + count;
@@ -28,7 +28,7 @@ export function CartProvider({ children }) {
   function isInCart(id) {
     return cart.some((elemento) => elemento.id === id);
   }
-  function buscarIndice(idElem) {
+  function searchIndex(idElem) {
     let index = 0;
     while (cart[index].id !== idElem) {
       index++;
