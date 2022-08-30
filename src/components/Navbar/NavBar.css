@@ -1,5 +1,4 @@
 
-
 .navbar {
   display: flex;
   flex-direction: row;
@@ -8,8 +7,14 @@
   transition: 0.3s;
   text-align: center;
   align-items: center;
-  font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  text-transform: uppercase;
+ 
+
+}
+.ul Link .font-color{
+  color: red;
+  text-decoration: none;
 }
 .navbar a{
     padding: 0 20px;

@@ -2,3 +2,9 @@
     max-width: 20%;
     max-height: 20%;
 }
+header{
+    background: url("../../../public/backgroundfunko.jpg");
+    background-size: cover;
+    background-position: center;
+    
+}

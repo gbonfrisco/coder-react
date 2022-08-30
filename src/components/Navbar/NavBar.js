@@ -10,12 +10,13 @@ export default function NavBar() {
 
   return (
     <div>
+     
       <ul className="navbar">
-         <Link to="/">Home</Link>
-         <Link to="/category/Stark">Stark</Link>
-         <Link to="/category/Lannister">Lannister</Link>
-         <Link to="/category/Beyondthewall">Beyond the Wall</Link>
-         <Link to="/category/Others">Others</Link>
+         <Link className="font-color" to="/">Home</Link>
+         <Link className="font-color" to="/category/Stark">Stark</Link>
+         <Link className="font-color" to="/category/Lannister">Lannister</Link>
+         <Link className="font-color" to="/category/Beyondthewall">Beyond the Wall</Link>
+         <Link className="font-color" to="/category/Others">Others</Link>
          {
           totalItem()>0 ?
           <Link to="/cart"><img className="cart" src={cart} alt="cart" />{totalItem()}</Link>

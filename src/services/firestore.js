@@ -1,13 +1,11 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import {getFirestore} from "firebase/firestore"
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import data from "../components/Data/Data";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
 const firebaseConfig = {
   apiKey: "AIzaSyCpEc5eTz_Y1EvxQQZggXiJX3L1xBdr9ho",
   authDomain: "funko-react.firebaseapp.com",
@@ -20,11 +18,16 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const firestoreBD = getFirestore(app)
 
 export async function saveProductsToFirebase(){
-  
+  const collectionFunkos = collection(firestoreBD, "funkogot");
+
+  for (let item of data) {
+    const docref = await addDoc(collectionFunkos, item);
+    console.log("documento creado con id:", docref.id);
+  }
 }
+
 
 export default firestoreBD;

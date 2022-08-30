@@ -1,7 +1,29 @@
 import React, { useEffect, useState } from "react";
 import data from "../Data/Data.js";
 import ItemDetail from "./ItemDetail.js";
-import { useParams } from "react-router-dom";
+import { resolvePath, useParams } from "react-router-dom";
+
+import firestoreBD from "../../services/firestore";
+import {collection,doc,getDoc} from "firebase/firestore";
+
+
+
+function getProduct(id) {
+  return new Promise((resolve,reject)=>{
+
+  
+  const funkocollection = collection(firestoreBD,"funkogot");
+  const docRef = doc(funkocollection,id);
+
+  getDoc(docRef).then(snapshot =>{
+    resolve(
+      {...snapshot.data(), id:snapshot.id}
+    )
+  });
+})
+}
+
+
 
 
 
@@ -10,16 +32,10 @@ function ItemDetailContainer() {
 
   const idURL = useParams().id;
 
-  function getProduct() {
-    return new Promise((resolve, reject) => {
 
-      let itemRequested = data.find( elemento => elemento.id == idURL )
-      setTimeout(() => resolve(itemRequested), 1000);
-    });
-  }
 
   useEffect(() => {
-    getProduct().then((respuesta) => setItem(respuesta));
+    getProduct(idURL).then((respuesta) => setItem(respuesta));
   }, []);
 
   return (
