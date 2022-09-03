@@ -4,6 +4,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 import {useContext} from "react";
 import {cartContext} from "../../store/cartContext";
+import { Link } from "react-router-dom";
 
 
 function ItemDetail({id, tittle, desc, price, img, stock}) {
@@ -24,8 +25,6 @@ function ItemDetail({id, tittle, desc, price, img, stock}) {
     <div className="card-itemDetail">
       <div className="card-img">
         <img src={img} alt="img" />
-        <p>Texto texto texto</p>
-        {/* Esta descripcion irá como parte de data.js */}
       </div>
       <div className="card-detail">
         <h2>{tittle}</h2>
@@ -38,7 +37,7 @@ function ItemDetail({id, tittle, desc, price, img, stock}) {
         value={quantityInCart}
         />
         {quantityInCart !== 0?
-          <a href="/cart">Ir al carrito</a>
+          <Link to="/cart">Ir al carrito</Link>
           :<></>
           }
       </div>
