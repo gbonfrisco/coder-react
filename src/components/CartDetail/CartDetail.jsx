@@ -2,6 +2,7 @@ import React from 'react'
 import { ChaoticOrbit } from '@uiball/loaders'
 import { useContext } from "react";
 import { cartContext } from "../../store/cartContext";
+import "./CartDetail.css";
 import Form from '../UserForm/Form';
 
 
@@ -48,12 +49,14 @@ function CartDetail({detail}) {
            <h2>
              {
              totalItem()===0 ?
-             <h3>No hay items en el carrito</h3>
+             <span>No hay items en el carrito</span>
              :
-             <h3>Items totales: {totalItem()}</h3>
+             <h3>Items totales: {totalItem()}
+             <Form cart={detail}/>
+             </h3>
              }
            </h2>
-             <Form cart={detail}/>
+             
          </div>
      </>
        }

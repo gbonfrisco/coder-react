@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { getDocs, collection, addDoc, query, where, writeBatch, documentId } from "firebase/firestore";
 import { useNavigate } from 'react-router-dom'
 import firestoreBD from "../../services/firestore";
+import "./Form.css";
 
 function Form({cart}) {
   const [userData, setUserData] = useState({

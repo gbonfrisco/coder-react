@@ -1,5 +1,5 @@
 import "./NavBar.css";
-import cart from "./bx-cart.svg";
+import cart from "./bx-cart.png";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { cartContext } from "../../store/cartContext";
@@ -19,7 +19,7 @@ export default function NavBar() {
          <Link className="font-color" to="/category/Others">Others</Link>
          {
           totalItem()>0 ?
-          <Link to="/cart"><img className="cart" src={cart} alt="cart" />{totalItem()}</Link>
+          <Link className="font-color" to="/cart"><img className="cart font-color" src={cart} alt="cart" />{totalItem()}</Link>
           : <></>
          }
          
